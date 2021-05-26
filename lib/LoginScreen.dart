@@ -22,6 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         .of(context)
         .size;
     return Scaffold(
+        backgroundColor: Colors.brown[100],
         body: isLoading ? Center(
           child: Container(
             height: size.height / 20,
@@ -44,6 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Text(
                   "Welcome",
                   style: TextStyle(
+                    color: Colors.brown[900],
                     fontSize: 34,
                     fontWeight: FontWeight.bold,
                   ),
@@ -52,9 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 width: size.width / 1.1,
                 child: Text(
-                  "Sign In to Continue!",
+                  "Log In to Continue!",
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.brown[900],
                     fontSize: 25,
                     fontWeight: FontWeight.w500,
                   ),
@@ -63,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: size.height / 10,
               ),
+
               Container(
                 width: size.width,
                 alignment: Alignment.center,
@@ -73,15 +76,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Container(
                   width: size.width,
                   alignment: Alignment.center,
-                  child: field(size, "Enter your password", Icons.lock_outline, _password),
+                  child: field(size,"Enter your password", Icons.lock_outline, _password),
                 ),
               ),
               SizedBox(
-                height: size.height / 10,
+                height: size.height / 30,
               ),
               customButton(size),
               SizedBox(
-                height: size.height / 40,
+                height: size.height / 28,
               ),
               GestureDetector(
                 onTap: () =>
@@ -90,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Colors.brown[400],
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
@@ -137,16 +140,16 @@ class _LoginScreenState extends State<LoginScreen> {
 
       child: Container(
           height: size.height / 14,
-          width: size.width / 1.2,
+          width: size.width / 1.9,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.blue,
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.brown[400],
           ),
           alignment: Alignment.center,
           child: Text(
-            "Login",
+            "Log In",
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.brown[100],
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -161,15 +164,29 @@ class _LoginScreenState extends State<LoginScreen> {
       height: size.height / 14,
       width: size.width / 1.1,
       child: TextField(
+
+        cursorColor: Colors.brown[400],
         controller: cont,
         decoration: InputDecoration(
-          prefixIcon: Icon(icon),
+          prefixIcon: Icon(
+              icon,
+              color: Colors.brown[400],
+          ),
+
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: TextStyle(color: Colors.brown[400]),
+
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(color:Colors.brown),
           ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(color:Colors.brown),
+          ),
+
         ),
+
       ),
 
     );
