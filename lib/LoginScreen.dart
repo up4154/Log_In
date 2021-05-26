@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (_) => CreateAccount())),
                 child: Text(
-                  "Create Account",
+                  "Sign Up",
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 16,
