@@ -49,7 +49,7 @@ class _CreateAccountState extends State<CreateAccount> {
           Container(
             width: size.width / 1.1,
             child: Text(
-              "Create Account to Continue!",
+              "Sign Up to Continue!",
               style: TextStyle(
                 color: Colors.grey[700],
                 fontSize: 25,
@@ -124,7 +124,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       context, MaterialPageRoute(builder: (_) => HomeScreen()));
                   print("Account Created Sucessfull");
                 } else {
-                  print("Login Failed");
+                  print("Sign up Failed");
                 }
               });
             } else {
